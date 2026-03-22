@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NEU Library | Complete Profile</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="login-body">
+
+  <div class="page-transition-overlay" id="page-overlay"></div>
+
+  <div class="login-wrapper">
+
+    <div class="login-left">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="images/neu-library-logo.png" alt="NEU Logo"/>
+        </div>
+        <div class="brand-divider"></div>
+        <h1>NEU Library</h1>
+        <p>NEU Library Visitor Log</p>
+      </div>
+      <div class="left-footer">
+        <p>New Era University &copy; 2025</p>
+      </div>
+    </div>
+
+    <div class="login-right">
+      <div class="login-card">
+
+        <div class="login-header">
+          <h2>Complete Your Profile</h2>
+          <p>We need a few more details before you can access the library system</p>
+        </div>
+
+        <div id="google-user-info" style="
+          display:flex; align-items:center; gap:12px;
+          background:var(--bg-subtle); border:1px solid var(--border);
+          border-radius:var(--radius-sm); padding:14px 16px; margin-bottom:20px;
+          animation:fadeInDown 0.4s ease both;">
+          <div id="signup-avatar" style="
+            width:40px; height:40px; border-radius:50%;
+            background:var(--primary); color:#fff;
+            display:flex; align-items:center; justify-content:center;
+            font-weight:700; font-size:1rem; flex-shrink:0; overflow:hidden;">
+          </div>
+          <div>
+            <p id="signup-name" style="font-weight:700; font-size:0.9rem; color:var(--text);"></p>
+            <p id="signup-email" style="font-size:0.78rem; color:var(--text-muted);"></p>
+          </div>
+        </div>
+
+        <div id="signup-error" class="alert alert-error hidden">
+          <i class="fas fa-circle-exclamation"></i>
+          <span id="signup-error-text">Error</span>
+        </div>
+        <div id="signup-success" class="alert alert-success hidden">
+          <i class="fas fa-circle-check"></i>
+          <span>Profile created! Redirecting...</span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label><i class="fas fa-id-card"></i> Student ID</label>
+            <input type="text" id="input-student-id" placeholder="Auto-generated" readonly/>
+          </div>
+          <div class="form-group">
+            <label><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" id="input-name" placeholder="Your full name"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-building-columns"></i> College</label>
+          <select id="input-college">
+            <option value="">-- Select College --</option>
+            <option value="College of Accountancy">College of Accountancy</option>
+            <option value="College of Agriculture">College of Agriculture</option>
+            <option value="College of Arts and Sciences">College of Arts and Sciences</option>
+            <option value="College of Business Administration">College of Business Administration</option>
+            <option value="College of Communication">College of Communication</option>
+            <option value="College of Informatics and Computing Studies">College of Informatics and Computing Studies</option>
+            <option value="College of Criminology">College of Criminology</option>
+            <option value="College of Education">College of Education</option>
+            <option value="College of Engineering and Architecture">College of Engineering and Architecture</option>
+            <option value="College of Medical Technology">College of Medical Technology</option>
+            <option value="College of Midwifery">College of Midwifery</option>
+            <option value="College of Music">College of Music</option>
+            <option value="College of Nursing">College of Nursing</option>
+            <option value="College of Physical Therapy">College of Physical Therapy</option>
+            <option value="College of Respiratory Therapy">College of Respiratory Therapy</option>
+            <option value="School of International Relations">School of International Relations</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fas fa-user-tie"></i> Type</label>
+          <select id="input-employee-status">
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Staff">Staff</option>
+          </select>
+        </div>
+
+        <button class="btn-primary" onclick="completeSignup()">
+          <span>Complete Registration</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
