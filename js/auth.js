@@ -16,7 +16,7 @@ async function handleGoogleLogin() {
   document.getElementById('google-btn').disabled = true
   const { error } = await supabaseClient.auth.signInWithOAuth({
     provider: 'google',
-    options: { redirectTo: 'http://127.0.0.1:5500/index.html' }
+    options: { redirectTo: 'https://neu-library-visitor-log-chi.vercel.app/index.html' }
   })
   if (error) {
     document.getElementById('loading-msg').style.display = 'none'
