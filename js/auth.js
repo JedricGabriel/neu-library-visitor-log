@@ -163,7 +163,7 @@ async function handleSwitchAccount() {
   const { error } = await supabaseClient.auth.signInWithOAuth({
     provider: 'google',
     options: {
-      redirectTo: 'http://127.0.0.1:5500/index.html',
+      redirectTo: 'https://neu-library-visitor-log-chi.vercel.app/index.html',
       queryParams: { prompt: 'select_account' }
     }
   })
